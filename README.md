@@ -1,0 +1,3 @@
+两种读取脉冲间隔数据方式
+top：在PL端设置FIFO，通过S_AXI_LITE读取ps端写入寄存器数据存入FIFO，然后再读出FIFO中的数据交给pul_generate产生脉冲
+ddr_motor_ctrl：ps端写入脉冲间隔数据到ps端DDR中，pl端通过M_AXI_LITE直接读取DDR中数据，然后交给pul_generate产生脉冲
